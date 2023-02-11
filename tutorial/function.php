@@ -58,32 +58,32 @@
     });
 ?>
 
-<div class="container">
-    <div class="my-20">
-    <h1>Book List </h1>
+<div class="w-3/4 ml-auto mr-auto shadow-lg p-12">
+    <div >
+    <h1 class="text-2xl font-bold">Book List </h1>
     <ol>
         <?php foreach(filterByAuthor($books, 'Author 1') as $book):?>
-            <a href="<?= $book['link'] ?>">
+            <a class="text-blue-500 hover:text-blue-800 " href="<?= $book['link'] ?>">
         <li><?= "{$book['name']} ( {$book['price']} tk )"?></li>
         </a>
         <?php endforeach;?>
     </ol>
     </div>
-    <div class="my-20">
-    <h1>Book List -- lamda function </h1>
+    <div>
+    <h1 class="text-2xl font-bold">Book List -- lamda function </h1>
     <ol>
         <?php foreach($filterBooks as $book):?>
-            <a href="<?= $book['link'] ?>">
+            <a class="text-blue-500 hover:text-blue-800 " href="<?= $book['link'] ?>">
         <li><?= "{$book['name']} ( {$book['price']} tk )"?></li>
         </a>
         <?php endforeach;?>
     </ol>
     </div>
-    <div class="my-20">
-    <h2>Book List -- Build in  function </h2>
+    <div>
+    <h2 class="text-2xl font-bold">Book List -- Build in  function </h2>
     <ol>
         <?php foreach(array_filter($books, function($book){ return $book['price']<=200; }) as $book):?>
-            <a href="<?= $book['link'] ?>">
+            <a class="text-blue-500 hover:text-blue-800 " href="<?= $book['link'] ?>">
         <li><?= "{$book['name']} ( {$book['price']} tk )"?></li>
         </a>
         <?php endforeach;?>
